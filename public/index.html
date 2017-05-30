@@ -16,14 +16,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 </head>
-<nav class="navbar navbar-toggleable-md navbar-light bg-faded" ng-controller="MainCtrl as main">
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <a class="navbar-brand" href="#">Reddit</a>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+
+    <ul ng-controller="MainCtrl as main" class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" ui-sref="home">Home<span class="sr-only">(current)</span></a>
       </li>
@@ -34,7 +35,10 @@
         <a class="nav-link" ng-hide="main.loggedIn" ui-sref="login">Login</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" ng-show="main.loggedIn" ui-sref="login">Log out</a>
+        <a class="nav-link" ng-show="main.loggedIn" ui-sref="postsIndex">Posts</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" ng-show="main.loggedIn" ng-click="main.logout()">Log out</a>
       </li>
     </ul>
 

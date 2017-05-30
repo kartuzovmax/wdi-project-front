@@ -36,7 +36,7 @@
         <a class="nav-link" ng-show="main.loggedIn" ui-sref="postsIndex">Posts</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" ng-show="main.loggedIn" ui-sref="login">Log out</a>
+        <a class="nav-link" ng-show="main.loggedIn" ng-click="main.logout()">Log out</a>
       </li>
     </ul>
 
