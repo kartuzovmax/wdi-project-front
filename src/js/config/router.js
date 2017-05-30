@@ -1,5 +1,5 @@
 angular
-.moduler('Reddit')
+.module('Reddit')
 .config(Router);
 
 
@@ -13,8 +13,19 @@ function Router($stateProvider, $locationProvider, $urlRouterProvider) {
     templateUrl: '/js/views/home.html',
     controller: 'MainCtrl',
     controllerAs: 'main'
+  })
+  .state('login', {
+    url: '/login',
+    templateUrl: '/js/views/user/login.html',
+    controller: 'LoginCtrl',
+    controllerAs: 'Login'
+  })
+  .state('register', {
+    url: '/register',
+    templateUrl: '/js/views/user/register.html',
+    controller: 'RegisterCtrl',
+    controllerAs: 'Register'
   });
 
   $urlRouterProvider.otherwise('/');
-
 }
