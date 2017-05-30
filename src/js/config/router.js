@@ -1,5 +1,5 @@
 angular
-.moduler('Reddit')
+.module('Reddit')
 .config(Router);
 
 
