@@ -10,7 +10,7 @@ function LoginCtrl(UserFactory, CurrentUserService, $state) {
     .$promise
     .then(() => {
       CurrentUserService.getUser();
-      $state.go('postsIndex');
+      $state.go('home');
     }, err => {
       console.log(err, 'error in login controller');
     });

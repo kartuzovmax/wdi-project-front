@@ -12,7 +12,7 @@ function RegisterCtrl(UserFactory, CurrentUserService, $state) {
     .$promise
     .then(() => {
       CurrentUserService.getUser();
-      $state.go('postsIndex');
+      $state.go('login');
     }, (err) => {
       console.log(err, 'error in the register controller');
     });
