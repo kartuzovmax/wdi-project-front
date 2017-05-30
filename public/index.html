@@ -16,7 +16,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 </head>
-<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded" ng-controller="MainCtrl as main">
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -28,17 +28,20 @@
         <a class="nav-link" ui-sref="home">Home<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" ui-sref="register">Register</a>
+        <a class="nav-link" ng-hide="main.loggedIn" ui-sref="register">Register</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" ui-sref="login">Login</a>
+        <a class="nav-link" ng-hide="main.loggedIn" ui-sref="login">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" ng-show="main.loggedIn" ui-sref="login">Log out</a>
       </li>
     </ul>
 
   </div>
 </nav>
 
-<body ng-controller="MainCtrl as main">
+<body>
     <main ui-view></main>
 </body>
 </html>

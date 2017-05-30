@@ -6,9 +6,11 @@ LoginCtrl.$inject = ['UserFactory', 'CurrentUserService', '$state'];
 function LoginCtrl(UserFactory, CurrentUserService, $state) {
   const vm = this;
   vm.login = () => {
+    console.log('HIT LOGIN CTRL #1', vm.user);
     UserFactory.login(vm.user)
     .$promise
-    .then(() => {
+    .then(user => {
+      console.log(user);
       CurrentUserService.getUser();
       $state.go('home');
     }, err => {
