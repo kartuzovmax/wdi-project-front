@@ -1,5 +1,26 @@
 <h2>Register Form</h2>
+
 <form ng-submit="">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Username</label>
+    <input type="text" ng-model=".user.user_name" class="form-control" name="user_name" placeholder="Enter username">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email</label>
+    <input type="email" ng-model=".user.email" name="email" class="form-control"  placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" ng-model=".user.password" name="password" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password Confirmation</label>
+    <input type="password" class="form-control" ng-model=".user.password_confirmation" name="password_confirmation" placeholder="Password">
+  </div>
+  <button type="submit" class="btn btn-primary" value="Register">Submit</button>
+</form>
+
+<!-- <form ng-submit="">
   <label for="">User Name</label>
   <input ng-model=".user.user_name" type="text" name="user_name" value="">
   <label for="">Email</label>
@@ -9,4 +30,4 @@
   <label for="">Password Confirmation</label>
   <input ng-model=".user.password_confirmation" type="text" name="password_confirmation" value="">
   <input type="submit" name="" value="Register">
-</form>
+</form> -->
