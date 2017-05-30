@@ -1,6 +1,6 @@
 angular
   .module('Reddit')
-  .controller('ShowPosts', ShowPostsCtrl);
+  .controller('ShowPostsCtrl', ShowPostsCtrl);
 
 ShowPostsCtrl.$inject = ['$stateParams', 'PostsFactory', '$state'];
 function ShowPostsCtrl($stateParams, PostsFactory, $state) {
