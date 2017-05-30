@@ -31,6 +31,18 @@ function Router($stateProvider, $locationProvider, $urlRouterProvider) {
     templateUrl: '/js/views/posts/index.html',
     controller: 'PostsIndexCtrl',
     controllerAs: 'Posts'
+  })
+  .state('postsCreate', {
+    url: '/posts/all',
+    templateUrl: '/js/views/posts/create.html',
+    controller: 'PostsCreateCtrl',
+    controllerAs: 'Posts'
+  })
+  .state('postsShow', {
+    url: '/posts/all',
+    templateUrl: '/js/views/posts/show.html',
+    controller: 'PostsShowCtrl',
+    controllerAs: 'Posts'
   });
 
   $urlRouterProvider.otherwise('/');
