@@ -39,9 +39,9 @@ function Router($stateProvider, $locationProvider, $urlRouterProvider) {
     controllerAs: 'Posts'
   })
   .state('postsShow', {
-    url: '/posts/all',
+    url: '/posts/all/:id',
     templateUrl: '/js/views/posts/show.html',
-    controller: 'PostsShowCtrl',
+    controller: 'ShowPostsCtrl',
     controllerAs: 'Posts'
   });
 

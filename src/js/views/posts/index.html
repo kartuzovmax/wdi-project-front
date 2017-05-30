@@ -1,7 +1,7 @@
 <h1>Posts</h1>
 
 <div class="" ng-repeat="post in Posts.posts track by $index">
-  <h3>{{ $index+1 }})<a href="#">{{ post.title }}</a></h3>
+  <h3>{{ $index+1 }})<a ui-sref="postsShow({ id: {{post.id}}})">{{ post.title }}</a></h3>
   <img ng-src="{{post.image}}" alt="">
   <h4>{{ post.content }}</h2>
 </div>
