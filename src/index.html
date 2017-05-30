@@ -33,6 +33,9 @@
         <a class="nav-link" ng-hide="main.loggedIn" ui-sref="login">Login</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" ng-show="main.loggedIn" ui-sref="postsIndex">Posts</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" ng-show="main.loggedIn" ui-sref="login">Log out</a>
       </li>
     </ul>
