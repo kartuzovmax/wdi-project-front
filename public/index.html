@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html ng-app="Reddit">
-  <head>
-    <meta charset="utf-8">
-    <title>Angular Stack Setup</title>
-    <!-- inject:js -->
-    <script src="/js/app.js"></script>
-    <!-- endinject -->
-    <!-- inject:css -->
-    <link rel="stylesheet" href="/css/style.css">
-    <!-- endinject -->
-  </head>
-  <body>
-    {{ 1+1 }}
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Angular Stack Setup</title>
+  <!-- inject:js -->
+  <script src="/js/app.js"></script>
+  <!-- endinject -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- endinject -->
+</head>
+<body ng-controller="MainCtrl as main">
+  <div ng-repeat="user in main.users track by $index" class="block">
+    {{ user }}
+  </div>
+</body>
 </html>
